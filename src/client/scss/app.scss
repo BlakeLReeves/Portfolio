@@ -1,0 +1,16 @@
+@import '../../../node_modules/bootstrap/scss/bootstrap.scss';
+
+.moonlit-asteroid {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0F2027;
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+.container-margin {
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+}
