@@ -67,7 +67,7 @@ export default class IContact extends React.Component<IContactProps, IContactSta
 
         return (
             <>
-                <div className="container">
+                <div className="container fade-in">
                     <div className="row">
                         <div className="col-md-12">
                             <form className="form-group mt-5 border border-primary rounded p-3 shadow-lg bg-secondary"

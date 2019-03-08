@@ -49,7 +49,7 @@ export default class IHome extends React.Component<IHomeProps, IHomeState> {
     render() {
         return (
             <>
-                <div className="row">
+                <div className="row fade-in">
                     <div className="col-md-12 moonlit-asteroid position-relative d-flex align-items-center justify-content-center">
                         <Particles
                             className="position-absolute"
