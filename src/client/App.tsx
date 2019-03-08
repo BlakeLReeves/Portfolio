@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './public/Home';
 import Contact from './public/Contact';
 import Navbar from './shared/Navbar';
+import Donate from './public/Donate';
 
 export default class IApp extends React.Component<IAppProps, IAppState> {
 
@@ -16,6 +17,7 @@ export default class IApp extends React.Component<IAppProps, IAppState> {
                         <Switch>
                             <Route exact path='/' component={Home} />
                             <Route exact path='/contact' component={Contact} />
+                            <Route exact path='/donate' component={Donate} />
                         </Switch>
                     </div>
                 </>

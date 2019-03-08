@@ -8,6 +8,7 @@ const Navbar: React.SFC<NavbarProps> = () => {
         <nav className="nav bg-dark fade-in">
             <Link to="/" className="nav-link text-danger active">Home</Link>
             <Link to="/contact" className="nav-link text-danger active">Contact</Link>
+            <Link to="/donate" className="nav-link text-danger active">Donate</Link>
         </nav>
     );
 }
