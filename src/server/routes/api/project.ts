@@ -37,7 +37,7 @@ projectRouter.delete('/:id', async (req, res, next) => {
     try {
         let id = req.params.id;
         let project = await DB.Projects.deleteProject(id);
-        res.json({ message: 'Deleted! '});
+        res.json({ message: 'Deleted!'});
     } catch (err) {
         console.log(err);
         res.sendStatus(500);
@@ -46,11 +46,11 @@ projectRouter.delete('/:id', async (req, res, next) => {
 
 projectRouter.post('/', async (req, res, next) => {
     try {
-        let project = req.body.project;
+        let name = req.body.name;
         let github_link = req.body.github_link;
         let website = req.body.website;
-        let newProject = await DB.Projects.postProject(project, github_link, website);
-        res.send(newProject);
+        let newProject = await DB.Projects.postProject(name, github_link, website);
+        res.json({ message: 'Posted!'})
     } catch (err) {
         console.log(err);
         res.sendStatus(500);
@@ -60,11 +60,11 @@ projectRouter.post('/', async (req, res, next) => {
 projectRouter.put('/:id', async (req, res, next) => {
     try {
         let id = req.params.id;
-        let project = req.body.project;
+        let name = req.body.name;
         let github_link = req.body.github_link;
         let website = req.body.website;
-        let newProject = await DB.Projects.updateProject(id, project, github_link, website);
-        res.json({ message: 'Blogged! '});
+        let newProject = await DB.Projects.updateProject(id, name, github_link, website);
+        res.json({ message: 'Updated!'});
     } catch (err) {
         console.log(err);
         res.sendStatus(500);
