@@ -28,3 +28,21 @@
         opacity: 1;
     }
 }
+
+.tab-content{
+    padding: 7px;
+}
+
+.nav-tabs > li > a:hover{
+    background-color: #303136 !important;
+    border: medium none;
+}
+
+.nav-tabs > li > a{
+    background-color: lightgray !important;
+    margin-right: 1px; 
+}
+
+.nav {
+    border: none;
+}
