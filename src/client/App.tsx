@@ -5,6 +5,7 @@ import Home from './public/Home';
 import Contact from './public/Contact';
 import Navbar from './shared/Navbar';
 import Donate from './public/Donate';
+import Projects from './public/Projects';
 
 export default class IApp extends React.Component<IAppProps, IAppState> {
 
@@ -18,6 +19,7 @@ export default class IApp extends React.Component<IAppProps, IAppState> {
                             <Route exact path='/' component={Home} />
                             <Route exact path='/contact' component={Contact} />
                             <Route exact path='/donate' component={Donate} />
+                            <Route exact path='/projects' component={Projects} />
                         </Switch>
                     </div>
                 </>
