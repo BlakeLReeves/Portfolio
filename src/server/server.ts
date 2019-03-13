@@ -3,6 +3,8 @@ import * as express from 'express';
 import * as passport from 'passport';
 
 import routes from './routes/index';
+import './middleware/bearerstrategy';
+import './middleware/localstrategy';
 
 const app = express();
 

@@ -7,6 +7,9 @@ export default {
         database: process.env.DB_SCHEMA,
         password: process.env.DB_PASS
     },
+    auth: {
+        secret: process.env.SECRET
+    },
     mailgun: {
         api_key: process.env.MAILGUN_API,
         domain: process.env.MAILGUN_DOMAIN

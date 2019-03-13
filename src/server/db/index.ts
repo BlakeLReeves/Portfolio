@@ -2,6 +2,8 @@ import * as mysql from 'mysql';
 import config from '../config';
 
 import Projects from './queries/projects';
+import Tokens from './queries/tokens';
+import Users from './queries/users';
 
 export const pool = mysql.createPool(config.mysql);
 
@@ -15,5 +17,7 @@ export const Query = (query: string, values?: Array<string | number>) => {
 };
 
 export default {
-    Projects
+    Projects,
+    Tokens,
+    Users
 }
