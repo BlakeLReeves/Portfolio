@@ -62,7 +62,7 @@ class IPostProject extends React.Component<IPostProjectProps, IPostProjectState>
         return (
             <div className="row">
                 <div className="col-md-12">
-                    <form onSubmit={(e) => this.handleSubmit(e)} className="form-group m-2">
+                    <form onSubmit={(e) => this.handleSubmit(e)} className="form-group m-2 border border-info rounded p-2">
                         <label>Name:</label>
                         <input
                             type="text"

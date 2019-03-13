@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { json } from '../utils/api';
+import { json, User } from '../utils/api';
 import { RouteComponentProps } from 'react-router';
 
 export interface IUpdateProjectProps extends RouteComponentProps<{ id: string }> { }
@@ -25,9 +25,9 @@ export default class IUpdateProject extends React.Component<IUpdateProjectProps,
     }
 
     async componentWillMount() {
-        // if(!User || User.userid === null || User.role !== 'admin') {
-        //     this.props.history.replace('/login');
-        // }
+        if(!User || User.userid === null || User.role !== 'admin') {
+            this.props.history.replace('/login');
+        }
         let id = this.props.match.params.id;
 
         try {
@@ -87,7 +87,7 @@ export default class IUpdateProject extends React.Component<IUpdateProjectProps,
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <form onSubmit={(e) => this.handleEdit(e)} className="form-group m-2">
+                        <form onSubmit={(e) => this.handleEdit(e)} className="form-group m-2 border border-info rounded p-2">
                             <label>Name:</label>
                             <input
                                 type="text"
@@ -112,7 +112,7 @@ export default class IUpdateProject extends React.Component<IUpdateProjectProps,
                                 className="form-control d-block"
                                 placeholder={website}>
                             </input>
-                            <div className="d-flex">
+                            <div className="d-flex justify-content-between">
                                 <button className="btn btn-info mt-2">Save Changes</button>
                                 <button onClick={this.handleDelete} className="btn btn-danger mt-2">Delete</button>
                             </div>
