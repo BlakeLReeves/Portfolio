@@ -20,6 +20,7 @@ export default class IUpdateProject extends React.Component<IUpdateProjectProps,
         };
 
         this.handleEdit = this.handleEdit.bind(this);
+        this.handleDelete = this.handleDelete.bind(this);
 
     }
 
@@ -68,6 +69,16 @@ export default class IUpdateProject extends React.Component<IUpdateProjectProps,
         }
     }
 
+    async handleDelete() {
+        let id = this.props.match.params.id;
+        try {
+            let result = await json(`/api/projects/${id}`, 'DELETE');
+            this.props.history.push('/projects');
+        } catch (e) {
+            console.log(e);
+        }
+    }
+
     render() {
 
         const { name, github_link, website } = this.state;
@@ -103,6 +114,7 @@ export default class IUpdateProject extends React.Component<IUpdateProjectProps,
                             </input>
                             <div className="d-flex">
                                 <button className="btn btn-info mt-2">Save Changes</button>
+                                <button onClick={this.handleDelete} className="btn btn-danger mt-2">Delete</button>
                             </div>
                         </form>
                     </div>

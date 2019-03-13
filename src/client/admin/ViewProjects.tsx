@@ -14,9 +14,6 @@ class IViewProjects extends React.Component<IViewProjectsProps, IViewProjectsSta
         super(props);
 
         this.state = { projects: [] };
-
-        this.handleDelete = this.handleDelete.bind(this);
-
     }
 
     async componentDidMount() {
@@ -25,16 +22,6 @@ class IViewProjects extends React.Component<IViewProjectsProps, IViewProjectsSta
             this.setState({ projects });
         } catch (e) {
             console.log(e)
-        }
-    }
-
-    async handleDelete() {
-        let id = this.props.match.params.id;
-        try {
-            let result = await json(`/api/projects/${id}`, 'DELETE');
-            this.props.history.push('/projects');
-        } catch (e) {
-            console.log(e);
         }
     }
 
@@ -53,7 +40,6 @@ class IViewProjects extends React.Component<IViewProjectsProps, IViewProjectsSta
                                             <div className="text">Git Hub: <a href={project.github_link} target="_blank" rel="noopener noreferrer">{project.github_link}</a></div>
                                             <div className="text">Website: <a href={project.website} target="_blank" rel="noopener noreferrer">{project.website}</a></div>
                                             <Link to={`/projects/${project.id}/update`} className="btn btn-outline-info mt-2">Edit</Link>
-                                            <button onClick={this.handleDelete} className="btn btn-danger mt-2">Delete</button>
                                         </div>
                                     </div>
                                 </div>
