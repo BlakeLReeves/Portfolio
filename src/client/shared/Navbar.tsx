@@ -7,8 +7,8 @@ const Navbar: React.SFC<NavbarProps> = () => {
     return (
         <div className="containter">
             <div className="row">
-                <div className="col-sm-12">
-                    <ul className="nav nav-tabs tab-content bg-dark fade-in">
+                <div className="col-sm-12 bg-dark">
+                    <ul className="nav nav-tabs tab-content fade-in">
                         <li className="nav-item">
                             <Link to="/" className="nav-link text-info active">Home</Link>
                         </li>

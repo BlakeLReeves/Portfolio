@@ -17,4 +17,7 @@ export default {
     stripe: {
         sk_key: process.env.STRIPE_SK
     },
+    weather: {
+        api_key: process.env.WEATHER_API
+    }
 }
