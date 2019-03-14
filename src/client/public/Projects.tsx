@@ -27,7 +27,7 @@ export default class IProjects extends React.Component<IProjectsProps, IProjects
 
     render() {
         return (
-            <div className="container">
+            <div className="grade-grey">
                 <div className="row">
                     {this.state.projects.map(project => {
                         return <ProjectCard key={project.id} project={project} />

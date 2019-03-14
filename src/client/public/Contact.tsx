@@ -67,33 +67,35 @@ export default class IContact extends React.Component<IContactProps, IContactSta
 
         return (
             <>
-                <div className="container fade-in">
-                    <div className="row">
-                        <div className="col-md-12">
-                            <form className="form-group mt-5 border border-primary rounded p-3 shadow-lg bg-secondary"
-                                onSubmit={this.handleSubmit}
-                            >
-                                <label>Email</label>
-                                <input type="text"
-                                    value={this.state.from}
-                                    className="input-group my-1 p-1"
-                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ from: e.target.value })}
-                                />
-                                <label>Subject</label>
-                                <input type="text"
-                                    value={this.state.subject}
-                                    className="input-group my-1 p-1"
-                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ subject: e.target.value })}
-                                />
-                                <label>Message</label>
-                                <input type="text"
-                                    value={this.state.content}
-                                    className="input-group my-1 p-1"
-                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ content: e.target.value })}
-                                />
-                                <button className="btn btn-info mt-2 shadow">Email Me</button>
-                                {this.alert}
-                            </form>
+                <div className="grade-grey fade-in">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-12">
+                                <form className="form-group mt-5 border border-primary rounded p-3 shadow-lg bg-secondary"
+                                    onSubmit={this.handleSubmit}
+                                >
+                                    <label>Email</label>
+                                    <input type="text"
+                                        value={this.state.from}
+                                        className="input-group my-1 p-1"
+                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ from: e.target.value })}
+                                    />
+                                    <label>Subject</label>
+                                    <input type="text"
+                                        value={this.state.subject}
+                                        className="input-group my-1 p-1"
+                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ subject: e.target.value })}
+                                    />
+                                    <label>Message</label>
+                                    <input type="text"
+                                        value={this.state.content}
+                                        className="input-group my-1 p-1"
+                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ content: e.target.value })}
+                                    />
+                                    <button className="btn btn-info mt-2 shadow">Email Me</button>
+                                    {this.alert}
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>

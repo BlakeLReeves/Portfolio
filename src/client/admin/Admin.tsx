@@ -23,10 +23,16 @@ class IAdmin extends React.Component<IAdminProps, IAdminState> {
 
     render() {
         return (
-            <div className="container">
-                <Link onClick={() => { localStorage.clear(); this.props.history.replace('/'); window.location.reload() }} to="/" className="nav-link btn btn-info col-sm-2 mt-2">Logout</Link>
-                <PostProject />
-                <ViewProjects />
+            <div className="grade-grey fade-in">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-sm-8 mt-2">
+                            <Link onClick={() => { localStorage.clear(); this.props.history.replace('/'); window.location.reload() }} to="/" className="nav-link btn btn-info col-sm-2">Logout</Link>
+                        </div>
+                    </div>
+                    <PostProject />
+                    <ViewProjects />
+                </div>
             </div>
         );
     }

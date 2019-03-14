@@ -7,6 +7,17 @@
     background: #0F2027;
     background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  
     background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    overflow: scroll;
+}
+
+.grade-grey {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);
+    background: linear-gradient(to right, #2c3e50, #bdc3c7);
+    overflow: scroll;
 }
 
 .container-margin {

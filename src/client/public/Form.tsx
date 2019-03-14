@@ -28,7 +28,7 @@ class Form extends React.Component<IFormProps, IFormState> {
 
         e.preventDefault();
 
-        if(this.donating) return;
+        if (this.donating) return;
 
         try {
 
@@ -36,7 +36,7 @@ class Form extends React.Component<IFormProps, IFormState> {
             let { token } = await this.props.stripe.createToken({ name: this.state.name });
             let amount = this.state.amount;
             let result = await json('/api/donate', 'POST', { token, amount });
-            if(result) {
+            if (result) {
                 this.setState({
                     name: "",
                     amount: "",
@@ -55,39 +55,45 @@ class Form extends React.Component<IFormProps, IFormState> {
 
     render() {
 
-        if(this.state.donateStatus === 'success') {
+        if (this.state.donateStatus === 'success') {
             this.alert = <div className='alert alert-success p-1 m-3' role='alert'>Donation Complete</div>
-        } else if(this.state.donateStatus === 'error') {
+        } else if (this.state.donateStatus === 'error') {
             this.alert = <div className='alert alert-danger p-1 m-3' role='alert'>Error Processing the Donation</div>
         }
 
         return (
             <>
-                <main className="container fade-in">
-                    <form 
-                    className="form-group mt-3 border border-primary rounded shadow-lg p-3"
-                    onSubmit={this.handleSubmit}
-                    >
-                        <label>Name</label>
-                        <input 
-                        type="text"
-                        className="input-group my-1 p-1 border border-dark"
-                        value={this.state.name}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.target.value })}
-                        />
-                        <label>Amount</label>
-                        <input 
-                        type="text"
-                        className="input-group my-1 p-1 border border-dark"
-                        value={this.state.amount}
-                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ amount: e.target.value })}
-                        />
-                        <label>CC Number -- Exp. Date -- CVC</label>
-                        <CardElement className="p-2 border border-dark" />
-                        <button className="btn btn-primary border border-dark mt-3">Charge It!</button>
-                        {this.alert}
-                    </form>
-                </main>
+                <div className="grade-grey fade-in">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <form
+                                    className="form-group mt-3 border border-primary rounded shadow-lg p-3 bg-light"
+                                    onSubmit={this.handleSubmit}
+                                >
+                                    <label>Name</label>
+                                    <input
+                                        type="text"
+                                        className="input-group my-1 p-1 border border-dark"
+                                        value={this.state.name}
+                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.target.value })}
+                                    />
+                                    <label>Amount</label>
+                                    <input
+                                        type="text"
+                                        className="input-group my-1 p-1 border border-dark"
+                                        value={this.state.amount}
+                                        onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ amount: e.target.value })}
+                                    />
+                                    <label>CC Number -- Exp. Date -- CVC</label>
+                                    <CardElement className="p-2 border border-dark" />
+                                    <button className="btn btn-primary border border-dark mt-3">Charge It!</button>
+                                    {this.alert}
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </>
         );
     }

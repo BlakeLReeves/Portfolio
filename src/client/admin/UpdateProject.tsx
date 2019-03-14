@@ -25,7 +25,7 @@ export default class IUpdateProject extends React.Component<IUpdateProjectProps,
     }
 
     async componentWillMount() {
-        if(!User || User.userid === null || User.role !== 'admin') {
+        if (!User || User.userid === null || User.role !== 'admin') {
             this.props.history.replace('/login');
         }
         let id = this.props.match.params.id;
@@ -84,39 +84,41 @@ export default class IUpdateProject extends React.Component<IUpdateProjectProps,
         const { name, github_link, website } = this.state;
 
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12">
-                        <form onSubmit={(e) => this.handleEdit(e)} className="form-group m-2 border border-info rounded p-2">
-                            <label>Name:</label>
-                            <input
-                                type="text"
-                                value={name}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.target.value })}
-                                className="form-control d-block"
-                                placeholder={name}>
-                            </input>
-                            <label>Git Hub:</label>
-                            <input
-                                type="text"
-                                value={github_link}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ github_link: e.target.value })}
-                                className="form-control d-block"
-                                placeholder={github_link}>
-                            </input>
-                            <label>Website:</label>
-                            <input
-                                type="text"
-                                value={website}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ website: e.target.value })}
-                                className="form-control d-block"
-                                placeholder={website}>
-                            </input>
-                            <div className="d-flex justify-content-between">
-                                <button className="btn btn-info mt-2">Save Changes</button>
-                                <button onClick={this.handleDelete} className="btn btn-danger mt-2">Delete</button>
-                            </div>
-                        </form>
+            <div className="grade-grey fade-in">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <form onSubmit={(e) => this.handleEdit(e)} className="form-group m-2 border border-info rounded p-2 bg-light">
+                                <label>Name:</label>
+                                <input
+                                    type="text"
+                                    value={name}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.target.value })}
+                                    className="form-control d-block"
+                                    placeholder={name}>
+                                </input>
+                                <label>Git Hub:</label>
+                                <input
+                                    type="text"
+                                    value={github_link}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ github_link: e.target.value })}
+                                    className="form-control d-block"
+                                    placeholder={github_link}>
+                                </input>
+                                <label>Website:</label>
+                                <input
+                                    type="text"
+                                    value={website}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ website: e.target.value })}
+                                    className="form-control d-block"
+                                    placeholder={website}>
+                                </input>
+                                <div className="d-flex justify-content-between">
+                                    <button className="btn btn-info mt-2">Save Changes</button>
+                                    <button onClick={this.handleDelete} className="btn btn-danger mt-2">Delete</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>

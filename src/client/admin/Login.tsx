@@ -51,25 +51,27 @@ export default class ILogin extends React.Component<ILoginProps, ILoginState> {
         const { email, password } = this.state;
 
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12">
-                        <form onSubmit={(e) => this.handleLoginSubmit(e)} className="form-group p-3 my-4 bg-white border border-primary">
-                            <label>Email:</label>
-                            <input
-                                className="form-control p-1 my-2"
-                                value={email}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ email: e.target.value })}>
-                            </input>
-                            <label>Password:</label>
-                            <input
-                                className="form-control p-1 my-2"
-                                value={password}
-                                onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ password: e.target.value })}
-                                type="password">
-                            </input>
-                            <button className="btn btn-primary mt-2">Login</button>
-                        </form>
+            <div className="grade-grey fade-in">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <form onSubmit={(e) => this.handleLoginSubmit(e)} className="form-group p-3 my-4 bg-white border border-primary">
+                                <label>Email:</label>
+                                <input
+                                    className="form-control p-1 my-2"
+                                    value={email}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ email: e.target.value })}>
+                                </input>
+                                <label>Password:</label>
+                                <input
+                                    className="form-control p-1 my-2"
+                                    value={password}
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ password: e.target.value })}
+                                    type="password">
+                                </input>
+                                <button className="btn btn-primary mt-2">Login</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
