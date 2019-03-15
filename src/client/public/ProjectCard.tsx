@@ -16,11 +16,11 @@ export default class IProjectCard extends React.Component<IProjectCardProps, IPr
             <div className="container fade-in">
                 <div className="row">
                     <div className="col-md-12">
-                        <div className="card m-2 border border-info">
+                        <div className="card m-2 border border-info bg-dark">
                             <div className="card-body">
-                                <div className="card-title font-weight-bold border border-dark border-top-0 border-left-0 border-right-0">{this.props.project.name}</div>
-                                <div className="text">Git Hub: <a href={this.props.project.github_link} target="_blank" rel="noopener noreferrer">{this.props.project.github_link}</a></div>
-                                <div className="text">Website: <a href={this.props.project.website} target="_blank" rel="noopener noreferrer">{this.props.project.website}</a></div>
+                                <div className="card-title text-white font-weight-bold border border-info border-top-0 border-left-0 border-right-0">{this.props.project.name}</div>
+                                <div className="text text-white">Git Hub: <a href={this.props.project.github_link} target="_blank" rel="noopener noreferrer">{this.props.project.github_link}</a></div>
+                                <div className="text text-white">Website: <a href={this.props.project.website} target="_blank" rel="noopener noreferrer">{this.props.project.website}</a></div>
                             </div>
                         </div>
                     </div>

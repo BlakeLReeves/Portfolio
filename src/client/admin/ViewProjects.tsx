@@ -34,12 +34,12 @@ class IViewProjects extends React.Component<IViewProjectsProps, IViewProjectsSta
                         <div className="container fade-in">
                             <div className="row">
                                 <div className="col-md-12">
-                                    <div className="card m-2 border border-info">
+                                    <div className="card m-2 border border-info bg-dark">
                                         <div className="card-body">
-                                            <div className="card-title font-weight-bold border border-dark border-top-0 border-left-0 border-right-0">{project.name}</div>
-                                            <div className="text">Git Hub: <a href={project.github_link} target="_blank" rel="noopener noreferrer">{project.github_link}</a></div>
-                                            <div className="text">Website: <a href={project.website} target="_blank" rel="noopener noreferrer">{project.website}</a></div>
-                                            <Link to={`/projects/${project.id}/update`} className="btn btn-outline-info mt-2">Edit</Link>
+                                            <div className="card-title text-white font-weight-bold border border-info border-top-0 border-left-0 border-right-0">{project.name}</div>
+                                            <div className="text text-white">Git Hub: <a href={project.github_link} target="_blank" rel="noopener noreferrer">{project.github_link}</a></div>
+                                            <div className="text text-white">Website: <a href={project.website} target="_blank" rel="noopener noreferrer">{project.website}</a></div>
+                                            <Link to={`/projects/${project.id}/update`} className="btn btn-info mt-2">Edit</Link>
                                         </div>
                                     </div>
                                 </div>

@@ -68,26 +68,26 @@ class Form extends React.Component<IFormProps, IFormState> {
                         <div className="row">
                             <div className="col-sm-12">
                                 <form
-                                    className="form-group mt-3 border border-primary rounded shadow-lg p-3 bg-light"
+                                    className="form-group mt-3 border border-info rounded p-3 bg-dark"
                                     onSubmit={this.handleSubmit}
                                 >
-                                    <label>Name</label>
+                                    <label className="text-white">Name</label>
                                     <input
                                         type="text"
-                                        className="input-group my-1 p-1 border border-dark"
+                                        className="input-group my-1 p-1 border border-info bg-light"
                                         value={this.state.name}
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.target.value })}
                                     />
-                                    <label>Amount</label>
+                                    <label className="text-white">Amount</label>
                                     <input
                                         type="text"
-                                        className="input-group my-1 p-1 border border-dark"
+                                        className="input-group my-1 p-1 border border-info bg-light"
                                         value={this.state.amount}
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ amount: e.target.value })}
                                     />
-                                    <label>CC Number -- Exp. Date -- CVC</label>
-                                    <CardElement className="p-2 border border-dark" />
-                                    <button className="btn btn-primary border border-dark mt-3">Charge It!</button>
+                                    <label className="text-white">CC Number -- Exp. Date -- CVC</label>
+                                    <CardElement className="p-2 border border-info bg-light" />
+                                    <button className="btn btn-info mt-3">Charge It!</button>
                                     {this.alert}
                                 </form>
                             </div>

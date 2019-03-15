@@ -62,30 +62,27 @@ class IPostProject extends React.Component<IPostProjectProps, IPostProjectState>
         return (
             <div className="row">
                 <div className="col-md-12 fade-in">
-                    <form onSubmit={(e) => this.handleSubmit(e)} className="form-group m-2 border border-info rounded p-2 bg-light">
-                        <label>Name:</label>
+                    <form onSubmit={(e) => this.handleSubmit(e)} className="form-group m-2 border border-info rounded p-2 bg-dark">
+                        <label className="text-white">Name:</label>
                         <input
                             type="text"
                             value={name}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.target.value })}
-                            className="form-control d-block"
-                            placeholder="Name">
+                            className="form-control d-block border border-info bg-secondary text-white">
                         </input>
-                        <label>Git Hub:</label>
+                        <label className="text-white">Git Hub:</label>
                         <input
                             type="text"
                             value={github_link}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ github_link: e.target.value })}
-                            className="form-control d-block"
-                            placeholder="Git Hub">
+                            className="form-control d-block border border-info bg-secondary text-white">
                         </input>
-                        <label>Website:</label>
+                        <label className="text-white">Website:</label>
                         <input
-                            type="text"
+                            type="text text-white"
                             value={website}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ website: e.target.value })}
-                            className="form-control d-block"
-                            placeholder="Website">
+                            className="form-control d-block border border-info bg-secondary text-white">
                         </input>
                         <div className="d-flex">
                             <button className="btn btn-info mt-2">Post Project</button>

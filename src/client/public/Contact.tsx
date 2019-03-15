@@ -71,25 +71,25 @@ export default class IContact extends React.Component<IContactProps, IContactSta
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12">
-                                <form className="form-group mt-5 border border-primary rounded p-3 shadow-lg bg-secondary"
+                                <form className="form-group mt-5 border border-info rounded p-3 shadow-lg bg-dark"
                                     onSubmit={this.handleSubmit}
                                 >
-                                    <label>Email</label>
+                                    <label className="text-white">Email</label>
                                     <input type="text"
                                         value={this.state.from}
-                                        className="input-group my-1 p-1"
+                                        className="input-group my-1 p-1 bg-secondary border-info text-white"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ from: e.target.value })}
                                     />
-                                    <label>Subject</label>
+                                    <label className="text-white">Subject</label>
                                     <input type="text"
                                         value={this.state.subject}
-                                        className="input-group my-1 p-1"
+                                        className="input-group my-1 p-1 bg-secondary border-info text-white"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ subject: e.target.value })}
                                     />
-                                    <label>Message</label>
+                                    <label className="text-white">Message</label>
                                     <input type="text"
                                         value={this.state.content}
-                                        className="input-group my-1 p-1"
+                                        className="input-group my-1 p-1 bg-secondary border-info text-white"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ content: e.target.value })}
                                     />
                                     <button className="btn btn-info mt-2 shadow">Email Me</button>

@@ -88,29 +88,29 @@ export default class IUpdateProject extends React.Component<IUpdateProjectProps,
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <form onSubmit={(e) => this.handleEdit(e)} className="form-group m-2 border border-info rounded p-2 bg-light">
-                                <label>Name:</label>
+                            <form onSubmit={(e) => this.handleEdit(e)} className="form-group m-2 border border-info rounded p-2 bg-dark">
+                                <label className="text-white">Name:</label>
                                 <input
                                     type="text"
                                     value={name}
                                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.target.value })}
-                                    className="form-control d-block"
+                                    className="form-control d-block bg-secondary border border-info text-white"
                                     placeholder={name}>
                                 </input>
-                                <label>Git Hub:</label>
+                                <label className="text-white">Git Hub:</label>
                                 <input
                                     type="text"
                                     value={github_link}
                                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ github_link: e.target.value })}
-                                    className="form-control d-block"
+                                    className="form-control d-block bg-secondary border border-info text-white"
                                     placeholder={github_link}>
                                 </input>
-                                <label>Website:</label>
+                                <label className="text-white">Website:</label>
                                 <input
                                     type="text"
                                     value={website}
                                     onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ website: e.target.value })}
-                                    className="form-control d-block"
+                                    className="form-control d-block bg-secondary border border-info text-white"
                                     placeholder={website}>
                                 </input>
                                 <div className="d-flex justify-content-between">
