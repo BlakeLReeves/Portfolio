@@ -2,6 +2,8 @@ import * as React from 'react';
 import { CardElement, injectStripe, ReactStripeElements } from 'react-stripe-elements';
 import { json } from '../utils/api';
 
+import Weather from './Weather';
+
 interface IFormProps extends ReactStripeElements.InjectedStripeProps { }
 
 interface IFormState {
@@ -91,6 +93,7 @@ class Form extends React.Component<IFormProps, IFormState> {
                                     {this.alert}
                                 </form>
                             </div>
+                            <Weather />
                         </div>
                     </div>
                 </div>
