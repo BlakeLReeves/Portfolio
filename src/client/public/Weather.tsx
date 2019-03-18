@@ -9,6 +9,7 @@ interface IWeatherState {
     wind: number;
     name: string;
     description: string;
+    zipcode: number;
 }
 
 const API_KEY = process.env.WEATHER_API;
@@ -23,7 +24,8 @@ export default class Form extends React.Component<IWeatherProps, IWeatherState> 
             humidity: undefined,
             wind: undefined,
             name: undefined,
-            description: undefined
+            description: undefined,
+            zipcode: undefined
         };
     }
 
@@ -33,7 +35,7 @@ export default class Form extends React.Component<IWeatherProps, IWeatherState> 
 
         try {
 
-            const api_call = await fetch('api/weather');
+            const api_call = await fetch(`api/weather/${this.state.zipcode}`);
             const data = await api_call.json();
             console.log(data);
             this.setState({
@@ -41,7 +43,8 @@ export default class Form extends React.Component<IWeatherProps, IWeatherState> 
                 humidity: Math.floor(data.main.humidity),
                 wind: data.wind.speed = Math.floor(data.wind.speed * (3600/1609.344)),
                 name: data.name,
-                description: data.weather[0].description
+                description: data.weather[0].description,
+                zipcode: null
             });
         } catch (e) {
             throw e;
@@ -59,9 +62,11 @@ export default class Form extends React.Component<IWeatherProps, IWeatherState> 
                         <label className="text-white">Zipcode</label>
                         <input
                             type="number"
+                            value={this.state.zipcode}
                             name="zipcode"
                             placeholder="Zipcode..."
                             className="input-group my-1 p-1 border border-info bg-light"
+                            onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ zipcode: e.target.valueAsNumber })}
                         />
                         <button className="btn btn-info mt-3">Get Weather</button>
                     </form>

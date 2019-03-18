@@ -9,6 +9,7 @@ import Projects from './public/Projects';
 import Admin from './admin/Admin';
 import UpdateProject from './admin/UpdateProject';
 import Login from './admin/Login';
+import Resume from './public/Resume';
 
 export default class IApp extends React.Component<IAppProps, IAppState> {
 
@@ -26,6 +27,7 @@ export default class IApp extends React.Component<IAppProps, IAppState> {
                             <Route exact path='/admin' component={Admin} />
                             <Route exact path='/projects/:id/update' component={UpdateProject} />
                             <Route exact path='/login' component={Login} />
+                            <Route exact path='/resume' component={Resume} />
                         </Switch>
                     </div>
                 </>
