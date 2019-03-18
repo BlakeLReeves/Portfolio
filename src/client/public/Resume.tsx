@@ -10,7 +10,7 @@ export default class IResume extends React.Component<IResumeProps, IResumeState>
     }
     render() {
         return (
-            <div className="grade-grey fade-in">
+            <div className="zinc fade-in">
                 <div className="container">
                     <div className="row">
                         <div className="col-sm-12">
