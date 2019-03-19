@@ -1,6 +1,6 @@
 import * as express from 'express';
 import config from '../../config';
-import 'isomorphic-fetch';
+import * as fetch from 'isomorphic-fetch';
 
 const weatherRouter = express.Router();
 
