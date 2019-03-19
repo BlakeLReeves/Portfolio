@@ -62,7 +62,7 @@ export default class Form extends React.Component<IWeatherProps, IWeatherState> 
                         <label className="text-white">Zipcode</label>
                         <input
                             type="number"
-                            value={this.state.zipcode}
+                            value={undefined}
                             name="zipcode"
                             placeholder="Zipcode..."
                             className="input-group my-1 p-1 border border-info bg-light"

@@ -6,7 +6,7 @@ import ProjectCard from './ProjectCard';
 export interface IProjectsProps { }
 
 export interface IProjectsState {
-    projects: Array<{ id: number, name: string, github_link: string, website: string }>
+    projects: Array<{ id: number, name: string, github_link: string, website: string, image: string }>
 }
 
 export default class IProjects extends React.Component<IProjectsProps, IProjectsState> {

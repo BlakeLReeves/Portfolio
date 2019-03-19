@@ -67,7 +67,11 @@ class Form extends React.Component<IFormProps, IFormState> {
             <>
                 <div className="grade-grey fade-in">
                     <div className="container">
-                        <div className="row">
+                        <div className="row justify-content-center">
+                            <div className="col-sm-6 border border-info bg-dark rounded mt-2">
+                                <h1 className="text-white d-flex justify-content-center border border-top-0 border-left-0 border-right-0">Stripe API</h1>
+                                <p className="text-info d-flex justify-content-center">The below donation form is an example of me integrating a 3rd party API in this web application. This is the Stripe API. You can enter the number 42 repeatedly in the last input field in order to send a fake donation.</p>
+                            </div>
                             <div className="col-sm-12">
                                 <form
                                     className="form-group mt-3 border border-info rounded p-3 bg-dark"
@@ -92,6 +96,10 @@ class Form extends React.Component<IFormProps, IFormState> {
                                     <button className="btn btn-info mt-3">Charge It!</button>
                                     {this.alert}
                                 </form>
+                            </div>
+                            <div className="col-sm-6 border border-info bg-dark rounded mt-2">
+                                <h1 className="text-white d-flex justify-content-center border border-top-0 border-left-0 border-right-0">Open Weather API</h1>
+                                <p className="text-info d-flex justify-content-center">The below weather form is an example of me integrating a 3rd party API in this web application. This is the Open Weather API. You can enter any zipcode within the United States in order to get basic weather information for that location.</p>
                             </div>
                             <Weather />
                         </div>

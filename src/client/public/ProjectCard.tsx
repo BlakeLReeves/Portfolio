@@ -3,7 +3,7 @@ import { json } from '../utils/api';
 import { RouteComponentProps, withRouter } from 'react-router';
 
 export interface IProjectCardProps extends RouteComponentProps {
-    project: { id: number, name: string, github_link: string, website: string }
+    project: { id: number, name: string, github_link: string, website: string, image: string }
 }
 
 export interface IProjectCardState {
@@ -39,6 +39,7 @@ class IProjectCard extends React.Component<IProjectCardProps, IProjectCardState>
                                 <div className="card-title text-white font-weight-bold border border-info border-top-0 border-left-0 border-right-0">{this.props.project.name}</div>
                                 <div className="text text-white">Git Hub: <a href={this.props.project.github_link} target="_blank" rel="noopener noreferrer">{this.props.project.github_link}</a></div>
                                 <div className="text text-white">Website: <a href={this.props.project.website} target="_blank" rel="noopener noreferrer">{this.props.project.website}</a></div>
+                                <img src={this.props.project.image} alt="project" style={{width: 450, height: 250}} className="border border-info m-2"/>
                                 <div className="card-footer border border-info border-bottom-0 border-left-0 border-right-0">
                                     {this.state.tags.map(tag => <span className="badge badge-info text-white border border-info mr-1">{tag.name}</span>)}
                                 </div>

@@ -22,7 +22,7 @@ export default class IApp extends React.Component<IAppProps, IAppState> {
                         <Switch>
                             <Route exact path='/' component={Home} />
                             <Route exact path='/contact' component={Contact} />
-                            <Route exact path='/donate' component={Donate} />
+                            <Route exact path='/exampleAPI' component={Donate} />
                             <Route exact path='/projects' component={Projects} />
                             <Route exact path='/admin' component={Admin} />
                             <Route exact path='/projects/:id/update' component={UpdateProject} />
