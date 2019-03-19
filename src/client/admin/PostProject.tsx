@@ -66,21 +66,21 @@ class IPostProject extends React.Component<IPostProjectProps, IPostProjectState>
                         <label className="text-white">Name:</label>
                         <input
                             type="text"
-                            value={name}
+                            value={undefined}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.target.value })}
                             className="form-control d-block border border-info bg-secondary text-white">
                         </input>
                         <label className="text-white">Git Hub:</label>
                         <input
                             type="text"
-                            value={github_link}
+                            value={undefined}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ github_link: e.target.value })}
                             className="form-control d-block border border-info bg-secondary text-white">
                         </input>
                         <label className="text-white">Website:</label>
                         <input
                             type="text text-white"
-                            value={website}
+                            value={undefined}
                             onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ website: e.target.value })}
                             className="form-control d-block border border-info bg-secondary text-white">
                         </input>

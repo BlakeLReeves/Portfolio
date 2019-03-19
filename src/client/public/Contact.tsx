@@ -81,20 +81,23 @@ export default class IContact extends React.Component<IContactProps, IContactSta
                                     <label className="text-white">Email</label>
                                     <input type="text"
                                         value={this.state.from}
-                                        className="input-group my-1 p-1 bg-secondary border-info text-white"
+                                        className="input-group my-1 p-1 border-info"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ from: e.target.value })}
+                                        placeholder="Enter email"
                                     />
                                     <label className="text-white">Subject</label>
                                     <input type="text"
                                         value={this.state.subject}
-                                        className="input-group my-1 p-1 bg-secondary border-info text-white"
+                                        className="input-group my-1 p-1 border-info"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ subject: e.target.value })}
+                                        placeholder="Enter subject"
                                     />
                                     <label className="text-white">Message</label>
                                     <input type="text"
                                         value={this.state.content}
-                                        className="input-group my-1 p-1 bg-secondary border-info text-white"
+                                        className="input-group my-1 p-1 border-info"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ content: e.target.value })}
+                                        placeholder="Enter message"
                                     />
                                     <button className="btn btn-info mt-2 shadow">Email Me</button>
                                     {this.alert}

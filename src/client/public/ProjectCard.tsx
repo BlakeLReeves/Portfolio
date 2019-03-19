@@ -2,7 +2,7 @@ import * as React from 'react';
 import { json } from '../utils/api';
 import { RouteComponentProps, withRouter } from 'react-router';
 
-export interface IProjectCardProps extends RouteComponentProps<{ id: string }> {
+export interface IProjectCardProps extends RouteComponentProps {
     project: { id: number, name: string, github_link: string, website: string }
 }
 
@@ -19,7 +19,7 @@ class IProjectCard extends React.Component<IProjectCardProps, IProjectCardState>
     }
 
     async componentWillMount() {
-        let id = this.props.match.params.id;
+        let id = this.props.project.id;
         try {
             let tags = await json(`/api/projecttags/${id}`);
 
@@ -40,7 +40,7 @@ class IProjectCard extends React.Component<IProjectCardProps, IProjectCardState>
                                 <div className="text text-white">Git Hub: <a href={this.props.project.github_link} target="_blank" rel="noopener noreferrer">{this.props.project.github_link}</a></div>
                                 <div className="text text-white">Website: <a href={this.props.project.website} target="_blank" rel="noopener noreferrer">{this.props.project.website}</a></div>
                                 <div className="card-footer border border-info border-bottom-0 border-left-0 border-right-0">
-                                    {this.state.tags.map(tag => <span className="badge badge-info text-white border border-info">{tag.name}</span>)}
+                                    {this.state.tags.map(tag => <span className="badge badge-info text-white border border-info mr-1">{tag.name}</span>)}
                                 </div>
                             </div>
                         </div>
