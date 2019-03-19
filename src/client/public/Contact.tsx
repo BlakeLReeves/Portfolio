@@ -69,7 +69,11 @@ export default class IContact extends React.Component<IContactProps, IContactSta
             <>
                 <div className="grade-grey fade-in">
                     <div className="container">
-                        <div className="row">
+                        <div className="row justify-content-center">
+                            <div className="col-sm-6 border border-info bg-dark rounded mt-2">
+                                <h1 className="text-white d-flex justify-content-center border border-top-0 border-left-0 border-right-0">CONTACT</h1>
+                                <p className="text-info d-flex justify-content-center">Have a question or want to work together? Send me an email.</p>
+                            </div>
                             <div className="col-md-12">
                                 <form className="form-group mt-5 border border-info rounded p-3 shadow-lg bg-dark"
                                     onSubmit={this.handleSubmit}
