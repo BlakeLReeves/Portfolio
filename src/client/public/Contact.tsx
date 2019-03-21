@@ -83,7 +83,7 @@ export default class IContact extends React.Component<IContactProps, IContactSta
                                         value={this.state.from}
                                         className="input-group my-1 p-1 border-info"
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ from: e.target.value })}
-                                        placeholder="Enter email"
+                                        placeholder="Enter your email"
                                     />
                                     <label className="text-white">Subject</label>
                                     <input type="text"

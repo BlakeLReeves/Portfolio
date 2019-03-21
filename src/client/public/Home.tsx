@@ -58,7 +58,16 @@ export default class IHome extends React.Component<IHomeProps, IHomeState> {
                         />
                         <div className="col-md-12">
                             <Fade left opposite when={this.state.show}>
-                                <h1 className="text-white d-flex justify-content-center">Hello, my name is Blake Reeves.<br />I am a full-stack developer.</h1>
+                                <h3 className="text-white d-flex justify-content-center">Hello, my name is Blake Reeves.<br />I am a full-stack developer.</h3>
+                                <p className="text-white d-flex justify-content-center">
+                                I am a graduate of Covalence's online coding bootcamp based out of<br />
+                                Birmingham, AL, and a graduatefrom an accredited university with a<br />
+                                Bachelor of Arts degree.
+                                </p>
+                                <p className="text-white d-flex justify-content-center">
+                                I am looking for new work opportunities. Take a look around my page,<br />
+                                and if you think I am a good fit, contact me through the contact form.
+                                </p>
                             </Fade>
                             <div className="col-md-12 d-flex justify-content-center">
                                 <button

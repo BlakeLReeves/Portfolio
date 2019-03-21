@@ -70,7 +70,7 @@ class Form extends React.Component<IFormProps, IFormState> {
                         <div className="row justify-content-center">
                             <div className="col-sm-6 border border-info bg-dark rounded mt-2">
                                 <h1 className="text-white d-flex justify-content-center border border-top-0 border-left-0 border-right-0">Stripe API</h1>
-                                <p className="text-info d-flex justify-content-center">The below donation form is an example of me integrating a 3rd party API in this web application. This is the Stripe API. You can enter the number 42 repeatedly in the last input field in order to send a fake donation.</p>
+                                <p className="text-info d-flex justify-content-center">The below donation form is an example of me integrating a 3rd party API in this web application. This is the Stripe API. You can enter the number 42 repeatedly in the CC Number -- Exp. Date -- CVC input field in order to send a fake donation. The form can not take an amount exceding over 999,999.99.</p>
                             </div>
                             <div className="col-sm-12">
                                 <form
@@ -83,6 +83,7 @@ class Form extends React.Component<IFormProps, IFormState> {
                                         className="input-group my-1 p-1 border border-info bg-light"
                                         value={this.state.name}
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ name: e.target.value })}
+                                        placeholder="Enter Name"
                                     />
                                     <label className="text-white">Amount</label>
                                     <input
@@ -90,6 +91,7 @@ class Form extends React.Component<IFormProps, IFormState> {
                                         className="input-group my-1 p-1 border border-info bg-light"
                                         value={this.state.amount}
                                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => this.setState({ amount: e.target.value })}
+                                        placeholder="Enter Amount"
                                     />
                                     <label className="text-white">CC Number -- Exp. Date -- CVC</label>
                                     <CardElement className="p-2 border border-info bg-light" />
