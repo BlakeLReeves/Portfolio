@@ -17,6 +17,7 @@ export default class IResume extends React.Component<IResumeProps, IResumeState>
                             <header>
                                 <h1 className="d-flex justify-content-center">Blake Reeves</h1>
                                 <p className="d-flex justify-content-center">5023 Morning Dove Ln, Spring Hill, TN | 731-845-9310 | blake.reeves19@gmail.com</p>
+                                <p className="d-flex justify-content-center">https://github.com/blakereeves19</p>
                             </header>
                         </div>
                         <div className="col-sm-12">
@@ -24,7 +25,7 @@ export default class IResume extends React.Component<IResumeProps, IResumeState>
                             <p>Enthusiastic developer with experience in software development and client relations who is dedicated to succeeding at the task at hand.</p>
                             <ul>
                                 <li>Quick learner with comprehensive knowledge of coding languages as well as Microsoft Office, Mac OS, and Outlook</li>
-                                <li>Proven hard worker with a drive for excellence, as shown through success in studies and with Terminix</li>
+                                <li>Proven hard worker with a drive for excellence, as shown through success in studies and with internship</li>
                             </ul>
                         </div>
                         <div className="col-sm-12">
@@ -54,6 +55,16 @@ export default class IResume extends React.Component<IResumeProps, IResumeState>
                         </div>
                         <div className="col-sm-12">
                             <h4 className="border border-dark border-top-0 border-left-0 border-right-0">Work Experience</h4>
+                            <p className="font-weight-bold">StaySense</p>
+                            <div className="font-italic justify-content-between">
+                                <p>Software Developer Intern</p>
+                                <p>April 2019-May 2019</p>
+                            </div>
+                            <p>Worked on front-end for in house application in ReactJS, and on integrating with Property Management Systems through API calls in NodeJS and syncing data to MySQL Database.</p>
+                            <ul>
+                                <li>Attended AWS Summit in Atlanta, and gained knowledge and experience with AWS services</li>
+                                <li>Worked closely with the lead developer through shadowing, code reviews, and completing assigned coding projects and challenges</li>
+                            </ul>
                             <p className="font-weight-bold">Terminix</p>
                             <div className="font-italic justify-content-between">
                                 <p>Pest Control Technician</p>
@@ -61,8 +72,7 @@ export default class IResume extends React.Component<IResumeProps, IResumeState>
                             </div>
                             <p>Performed regular pest control services for customers on assigned route. Managed and communicated with 500+ customers to ensure satisfaction.</p>
                             <ul>
-                                <li>Earned 100% in satisfaction ratings from customer surveys by managing customer expectations and providing excellent customer service</li>
-                                <li>Achieved highest department sales for November and December</li>
+                                <li>Earned 100% in satisfaction ratings from customer surveys by managing customer expectations and providing excellent customer service, and achieved highest department sales for November and December</li>
                                 <li>Solved problems for customers, assessing individual situations and providing appropriate solutions</li>
                             </ul>
                             <p className="font-weight-bold">O'Charley's</p>
@@ -74,14 +84,7 @@ export default class IResume extends React.Component<IResumeProps, IResumeState>
                             <ul>
                                 <li>Multi-tasked and provided help to colleagues during busy peak hours</li>
                                 <li>Delivered excellent customer service by attending to their concerns and providing a pleasant experience</li>
-                                <li>Created effective seating charts to keep customers and servers happy, making certain to place guests according to number of people in the party</li>
                             </ul>
-                            <p className="font-weight-bold">Casey Jones Village</p>
-                            <div className="font-italic justify-content-between">
-                                <p>Barista</p>
-                                <p>May 2016-August 2016</p>
-                            </div>
-                            <p>Fulfilled customer drink orders, made a variety of coffee drinks, and ensured high-quality customer service.</p>
                         </div>
                         <div className="col-sm-12">
                             <h4 className="border border-dark border-top-0 border-left-0 border-right-0">Volunteer Experience</h4>
