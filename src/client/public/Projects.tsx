@@ -29,7 +29,7 @@ export default class IProjects extends React.Component<IProjectsProps, IProjects
         return (
             <div className="grade-grey">
                 <div className="row">
-                    {this.state.projects.map(project => {
+                    {this.state.projects.reverse().map(project => {
                         return <ProjectCard key={project.id} project={project} />
                     })}
                 </div>
