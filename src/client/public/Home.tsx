@@ -49,8 +49,8 @@ export default class IHome extends React.Component<IHomeProps, IHomeState> {
     render() {
         return (
             <>
-                <div className="row fade-in">
-                    <div className="col-md-12 moonlit-asteroid position-relative d-flex align-items-center justify-content-center">
+                <div className="row fade-in moonlit-asteroid">
+                    <div className="col-md-12 position-relative d-flex align-items-center justify-content-center">
                         <Particles
                             className="position-absolute"
                             params={particleOpt}
@@ -61,7 +61,7 @@ export default class IHome extends React.Component<IHomeProps, IHomeState> {
                                 <h3 className="text-white d-flex justify-content-center">Hello, my name is Blake Reeves.<br />I am a full-stack developer.</h3>
                                 <p className="text-white d-flex justify-content-center">
                                 I am a graduate of Covalence's online coding bootcamp based out of<br />
-                                Birmingham, AL, and a graduatefrom an accredited university with a<br />
+                                Birmingham, AL, and a graduate from an accredited university with a<br />
                                 Bachelor of Arts degree.
                                 </p>
                                 <p className="text-white d-flex justify-content-center">
